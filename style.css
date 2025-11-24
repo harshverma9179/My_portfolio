@@ -18,7 +18,6 @@ body {
   color: var(--text-color);
 }
 
-/* DARK MODE OVERRIDES */
 body.dark-mode {
   --bg-color: #020617;
   --surface-color: #020617;
@@ -32,7 +31,6 @@ body.dark-mode {
   --pastel-yellow: #FACC15;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -73,7 +71,6 @@ body.dark-mode {
   text-decoration-thickness: 3px;
 }
 
-/* THEME TOGGLE BUTTON */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -97,7 +94,6 @@ body.dark-mode {
   font-size: 1.1rem;
 }
 
-/* HERO SECTION */
 .hero {
   display: flex;
   align-items: center;
@@ -125,12 +121,10 @@ body.dark-mode {
   margin-bottom: 30px;
 }
 
-/* BUTTON */
 a.btn {
   text-decoration: none;
   color: black;
 }
-
 
 .btn {
   background: var(--pastel-pink);
@@ -153,7 +147,6 @@ body.dark-mode .btn {
   box-shadow: 3px 3px 0 var(--border-color);
 }
 
-/* PROFILE CARD */
 .profile-card {
   background: var(--surface-color);
   border: 3px solid var(--border-color);
@@ -179,7 +172,6 @@ body.dark-mode .btn {
   margin-bottom: 12px;
 }
 
-/* SECTIONS */
 .section {
   padding: 80px 60px;
   max-width: 1200px;
@@ -197,7 +189,6 @@ body.dark-mode .btn {
   margin-bottom: 40px;
 }
 
-/* GRID PROJECTS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,7 +217,7 @@ body.dark-mode .btn {
 .card-1:hover { box-shadow: 4px 4px 0 var(--pastel-pink); }
 .card-2:hover { box-shadow: 4px 4px 0 var(--pastel-blue); }
 .card-3:hover { box-shadow: 4px 4px 0 var(--pastel-yellow); }
-/* SKILL BARS CONTAINER */
+
 #skill-card {
   background: var(--surface-color);
   border: 3px solid var(--border-color);
@@ -250,7 +241,6 @@ body.dark-mode .btn {
   gap: 32px;
 }
 
-/* NAME & PERCENT LABEL */
 .label-row {
   display: flex;
   justify-content: space-between;
@@ -263,7 +253,6 @@ body.dark-mode .btn {
   opacity: 0.8;
 }
 
-/* OUTER BAR */
 .bar {
   width: 100%;
   height: 20px;
@@ -274,7 +263,6 @@ body.dark-mode .btn {
   overflow: hidden;
 }
 
-/* FILLED COLOR */
 .fill {
   height: 100%;
   width: var(--skill-level);
@@ -282,8 +270,6 @@ body.dark-mode .btn {
   animation: growBar 1.5s ease forwards;
 }
 
-
-/* Colored bars */
 .html-fill   { width: 90%; background: var(--pastel-pink); }
 .css-fill    { width: 85%; background: var(--pastel-blue); }
 .js-fill     { width: 70%; background: var(--pastel-yellow); }
@@ -302,7 +288,6 @@ body.dark-mode .btn {
   border-radius: 20px;
   padding: 35px;
   box-shadow: 12px 12px 0 var(--pastel-blue);
- 
   max-width: 1050px;
   margin: auto;
   transition: 0.25s ease;
@@ -313,7 +298,6 @@ body.dark-mode .btn {
   box-shadow: 16px 16px 0 var(--pastel-blue);
 }
 
-/* EDUCATION SECTION — EXTENDED CONTENT */
 .edu-card {
   background: var(--surface-color);
   border: 3px solid var(--border-color);
@@ -365,7 +349,6 @@ body.dark-mode .btn {
   border: 3px solid var(--border-color);
   border-radius: 16px;
   padding: 18px 20px;
-  
   transition: 0.2s;
 }
 #b1{
@@ -414,9 +397,6 @@ body.dark-mode .btn {
   line-height: 1.5;
 }
 
-
-
-/* CONTACT FORM */
 .contact-form {
   background: var(--surface-color);
   border: 3px solid var(--border-color);
@@ -465,11 +445,7 @@ body.dark-mode .btn {
   min-height: 140px;
   resize: none;
 }
-/* ------------------------------
-   RESPONSIVE DESIGN (MOBILE + TABLET)
---------------------------------*/
 
-/* Tablets (max-width: 992px) */
 @media (max-width: 992px) {
 
   .hero {
@@ -494,10 +470,8 @@ body.dark-mode .btn {
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
 
-  /* Navbar stacks or shrinks */
   .navbar {
     flex-direction: row;
     gap: 10px;
@@ -510,7 +484,6 @@ body.dark-mode .btn {
     font-size: 14px;
   }
 
-  /* Hero becomes vertical */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -534,16 +507,13 @@ body.dark-mode .btn {
     width: 270px;
   }
 
-  /* Skills pills center */
   .skills-grid {
     justify-content: center;
   }
 }
 
-/* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
 
-  /* Navbar simplified */
   .nav-links a {
     margin-left: 10px;
     font-size: 13px;
@@ -562,7 +532,6 @@ body.dark-mode .btn {
     font-size: 14px;
   }
 
-  /* Profile card adjusts */
   .profile-card {
     width: 240px;
     padding: 20px;
@@ -581,7 +550,6 @@ body.dark-mode .btn {
     font-size: 28px;
   }
 
-  /* Contact form smaller */
   .contact-form {
     padding: 25px;
   }
@@ -596,5 +564,3 @@ body.dark-mode .btn {
     font-size: 14px;
   }
 }
-
-
