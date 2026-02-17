@@ -1,11 +1,29 @@
-<script>
-window.onscroll = function() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+// ✅ Get progress bar once (performance friendly)
+const progressBar = document.querySelector(".progress-bar");
 
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+window.addEventListener("scroll", updateProgress);
+window.addEventListener("resize", updateProgress); // Recalculate on resize
 
-    let scrolled = (winScroll / height) * 100;
+function updateProgress() {
 
-    document.querySelector(".progress-bar").style.width = scrolled + "%";
-};
-</script>
+    // Current scroll position
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // Total scrollable height
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    // Prevent division by zero (small pages)
+    if (scrollHeight <= 0) {
+        progressBar.style.width = "0%";
+        return;
+    }
+
+    // Calculate percentage
+    const progress = (scrollTop / scrollHeight) * 100;
+
+    // Apply width
+    progressBar.style.width = progress + "%";
+}
+
+// ✅ Run once on page load
+updateProgress();
